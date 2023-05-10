@@ -15,9 +15,9 @@ function Navbar () {
           <div >
             <div className='flex items-center '>
                 <ul className='hidden md:flex gap-5'>
-                      <li className=' ps-10 hover:animate-bounce translate-x-5 p-2  hover:text-red-950 hover:text-2xl' ><a href="Home "  >Home</a></li>
+                      <li className=' ps-10 hover:animate-bounce translate-x-5 p-2 hover:text-red-950 hover:text-2xl' ><a href="Home "  >Home</a></li>
                       <li className=' ps-10 hover:animate-bounce translate-x-5 p-2 hover:text-red-950 hover:text-2xl'><a href="About" >About</a></li>
-                      <li className=' ps-10 hover:animate-bounce translate-x-5 p-2 hover:text-red-950 hover:text-2xl'><a href="New" >New</a></li>
+                      <li className=' ps-10 hover:animate-bounce translate-x-5 p-2 hover:text-red-950 hover:text-2xl'><a href="New" >News</a></li>
                       <li className=' ps-10 hover:animate-bounce translate-x-5 p-2 hover:text-red-950 hover:text-2xl'><a href="Contact" >Contact</a></li> 
                       <li className=' ps-10 hover:animate-bounce translate-x-5 p-2  hover:text-red-950 hover:text-2xl'><a href="Login" >Login</a></li>
 

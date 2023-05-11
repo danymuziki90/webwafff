@@ -1,15 +1,16 @@
 import React from 'react';
 import bgimage from "../assets/GQLR6101.JPG";
-import concept from "../assets/concept.PNG";
-import opportinuty from "../assets/opportunity.WEBP";
-import mission from "../assets/mission.JPG";
+import opportinuty from "../assets/opportinuty.JPG";
+import mision from "../assets/mission.JPG";
+import concept from "../assets/concept.JPG"
+import Contact from './Contact';
 
 
 const Home = () => {
   return (
-    <div className='bg-slate-50 '>
-        <div className='pt-10 '>
-                <img src={bgimage} alt= "bgimage" />
+    <div className='bg-slate-100 '>
+        <div className='pt-16 '>
+                <img src={bgimage} alt= "bgimage" className='w-full h-full md:px-40'/>
         </div>
         <div className="px-5  justify-between items-center w-full h-full md:max-w-[1240px] m-auto " >
         <div className=''> 
@@ -27,42 +28,41 @@ const Home = () => {
                     </p>
                 </div>
             </div>
-            <div className='md:flex  gap-5 py-5'  >
-                    <div className='my-5 md:w-1/3 text-justify'>
-                        <figure className='bg-slate-200 rounded-xl p-8 '>
-                            <div className='w-32 '><img src={concept} alt=""   /></div>
-                            <h4 className=' font-bold text-2xl'>Concept</h4>
+
+
+            <div className='md:flex  gap-5 py-5 max-w-[1240px] mx-auto md:grip-cols-3 '  >
+                    <div className='hover:scale-105 duration-300 my-20  text-justify bg-slate-200 rounded-xl p-8  '>
+                            <img src={concept} alt=""  className='w-[300px] h-[200px] rounded-2xl mx-auto mt-[-6rem]'/>
+                            <h4 className=' font-bold text-2xl text-center'>Concept</h4>
                             <p>
-                            Our mission is to make sure that everyone that get the opportunity to be part of our community should rip the benefit that comes with it. Such as personal grow, be educated in financial literacy, etc.  </p>
-                        </figure>
+                            Our mission is to make sure that everyone that get the opportunity to be part of our community should rip the benefit that comes with it. Such as personal grow, be educated in financial literacy, etc.  
+                            </p>
+                            <button className='border-2  border-black hover:border-none  hover:bg-blue-400 rounded-md p-1 uppercase text-sm'>Loarn more</button>
                     </div>
 
-                <div className='my-5 md:w-1/3 text-justify'>
-               
-                    <figure className='bg-slate-200 rounded-xl p-8   '>
-                    <div className='w-28 rounded-full  '><img src={mission} alt=""   /></div>
-                        <h3 className='font-bold text-2xl'>FWAFF’s long term mission</h3>
+                <div className='hover:scale-105 duration-300 my-20  text-justify bg-slate-200 rounded-xl p-8 '>
+                        <img src={mision} alt=""  className='w-[300px] h-[200px] rounded-2xl mx-auto mt-[-6rem]' />
+                        <h3 className='font-bold text-2xl text-center'>FWAFF’s long term mission</h3>
                         <p >
                         We have seen how people come to America and loose they are way in the process. Which I myself is one of them. And that is one of the thing that we will mostly focus about
-                        </p>
-                    </figure>
+                        </p> <button className='border-2  border-black hover:border-none  hover:bg-blue-400 rounded-md p-1 uppercase text-sm'>Loarn more</button>
                 </div>
                 
 
-                <div className='my-5 md:w-1/3 text-justify'>
-                    <figure className='bg-slate-200 rounded-xl p-8  '>
-                    <div className='w-28 rounded-full  '><img src={opportinuty} alt=""   /></div>
-                        <h3 className='font-bold text-2xl'>Opportunities</h3>
-                        <p>
-                        The problem that we face now in our community is luck of information and guidance and <br /> that’s what FWAFF is bring to our community. 
-                        </p>
-                    </figure>
+                <div className='hover:scale-105 duration-300 my-20 text-justify bg-slate-200 rounded-xl p-8 '>
+                    <img src={opportinuty} alt=""   className='w-[300px] h-[200px] rounded-2xl mx-auto mt-[-6rem]'/>
+                    <h3 className='font-bold text-2xl text-center'>Opportunities</h3>
+                    <p>
+                        The problem that we face now in our community is luck of information and guidance and that’s what FWAFF is bring to our community. 
+                    </p>
+                    <button className='border-2  border-black hover:border-none  hover:bg-blue-400 rounded-md p-1 uppercase text-sm'>Loarn more</button>
                 </div>
             </div>
 
-            <div  className=''>
-                    <h3 className='mb-5 text-center text-2xl font-semibold md:text-4xl' >Contact With Us</h3>
-                    <form className='bg-white rounded-lg p-8 md:px-32 '>
+            <div  className='p-5 '>
+                    <h3 className='mb-10 -mt-20 text-center text-3xl font-semibold md:text-5xl' >Contact With Us</h3>
+                    <a href="Contact"></a>
+                    <form className='bg-white rounded-lg  md:px-32 p-8'>
                        <div className=''>
                             <div className=' justify-between py-5 flex  '>
                                 <input type="text" name="" id="" placeholder=' Your Name' className='h-10 rounded-md w-6/12 bg-blue-200'  />
@@ -80,6 +80,7 @@ const Home = () => {
                             <button type="submit" className='bg-blue-500 w-48 rounded-sm font-semibold  p-3'>Send Message</button>
                         </div>
                     </form>
+                    <div></div>
                 </div>
         </div>
     </div>

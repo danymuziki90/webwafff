@@ -1,47 +1,45 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {useState} from 'react';
-import {menu, close, logo} from '../assets';
+import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 
 
-function Navbar () {
-      const [toggle, setToggle ] =useState(true );
-	  const handleClick = ()=>setToggle(!toggle)
-      return (
-    <div className='w-screen h-[80px]  bg-white fixed drop-shadow-lg'>
-      <nav className='flex px-8  justify-between items-center w-full h-full md:max-w-[1240px] m-auto'>
-          <div > 
-              <a href="#" className='cursor-pointer font-4xl  '>FWAFF </a> 
+const Navbar = () => {
+  const [nav, setNav] = useState(true)
+
+  const handleNav = () =>{
+    setNav(!nav);
+  };
+  return (
+    
+    <div className='  fixed border-b border-[#7e7d7d73] bg-white flex justify-between items-center  text-black   md:flex gap-5   w-full m-auto  '>
+          <div className=' h-24 bg-white flex justify-between items-center  mx-auto text-black   md:flex gap-5   w-full md:max-w-[1240px] m-auto  '>
+            <h1 className='  text-3xl font-bold text-[#0b0b0c] ml-8'>WAFF </h1>
+            <ul className='hidden md:flex gap-10 font-semibold text-xl '>
+                  <a href="Home"><li className='p-4 '>Home</li></a>
+                  <a href="about"><li className='p-4 '>About </li></a>
+                  <a href="new"><li className='p-4 '>New</li></a>
+                  <a href="contact"><li className='p-4 '>Contact</li></a>
+            </ul>
           </div>
-          <div >
-            <div className='flex items-center '>
-                <ul className='hidden md:flex gap-5'>
-                      <li className=' ps-10 hover:animate-bounce translate-x-5 p-2 hover:text-red-950 hover:text-2xl' ><a href="Home "  >Home</a></li>
-                      <li className=' ps-10 hover:animate-bounce translate-x-5 p-2 hover:text-red-950 hover:text-2xl'><a href="About" >About</a></li>
-                      <li className=' ps-10 hover:animate-bounce translate-x-5 p-2 hover:text-red-950 hover:text-2xl'><a href="New" >News</a></li>
-                      <li className=' ps-10 hover:animate-bounce translate-x-5 p-2 hover:text-red-950 hover:text-2xl'><a href="Contact" >Contact</a></li> 
-                      <li className=' ps-10 hover:animate-bounce translate-x-5 p-2  hover:text-red-950 hover:text-2xl'><a href="Login" >Login</a></li>
-
-                </ul>
-            </div>
-
-            <div className=' md:hidden cursor-pointer ' onClick={handleClick }>
-                <img src={!toggle?close:menu} alt="menu" className='w-[28px] h-[28px] object-contain m-5'/>
-            </div>
-
-          </div>
-      </nav>
-      <div className='transition'>
-        <ul className={!toggle? 'bg-white w-full md:hidden' :'hidden  '} >
-                      <li className=' ps-10 hover:animate-bounce translate-x-5 p-2  hover:text-red-950 hover:text-2xl' ><a href="Home "  >Home</a></li>
-                      <li className=' ps-10 hover:animate-bounce translate-x-5 p-2 hover:text-red-950 hover:text-2xl'><a href="About" >About</a></li>
-                      <li className=' ps-10 hover:animate-bounce translate-x-5 p-2 hover:text-red-950 hover:text-2xl'><a href="New" >New</a></li>
-                      <li className=' ps-10 hover:animate-bounce translate-x-5 p-2 hover:text-red-950 hover:text-2xl'><a href="Contact" >Contact</a></li> 
-                      <li className=' ps-10 hover:animate-bounce translate-x-5 p-2  hover:text-red-950 hover:text-2xl'><a href="Login" >Login</a></li>
-        </ul> 
-      </div>
           
+
+          <div onClick={handleNav} className='block md:hidden pr-5  '>
+          {!nav ? <AiOutlineClose size={24}  /> :<AiOutlineMenu size={24} />}
+            
+          </div>
+
+          <div className= {!nav ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r p-4 border-r-gray-900 bg-[#000300] ease-in-out duration-700' : 'fixed left-[-100%] '}>
+          <h1 className='  text-3xl font-bold text-[#6cb1df] ml-8'>WAFF </h1>
+            <ul className=' uppercase text-white md:hidden'>
+                  <a href="Home"><li className='p-4 border-b border-gray-500'>Home</li></a>
+                  <a href="about"><li className='p-4 border-b border-gray-500'>About </li></a>
+                  <a href="new"><li className='p-4 border-b border-gray-500'>New</li></a>
+                  <a href="contact"><li className='p-4 '>Contact</li></a>
+              </ul>
+          </div>
     </div>
+   
   )
 }
 
-export default Navbar
+export default Navbar;

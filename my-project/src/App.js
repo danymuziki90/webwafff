@@ -1,19 +1,18 @@
+import React from 'react';
 import './App.css';
 import './App.css';
 import {
 	createBrowserRouter,
 	RouterProvider,
-	Router,
 	Outlet,
   } from "react-router-dom";
-  import Navbar from "./components/Navbar";
   import Footer from "./components/Footer";
   import Home from './pages/Home';
   import About from './pages/About';
   import New from './pages/New';
   import Contact from './pages/Contact';
 	import Login  from './pages/Login';
-	
+	import Navbar from './components/Navbar';
 
   const Layout =() =>{
 	return (

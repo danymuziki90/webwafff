@@ -47,10 +47,6 @@ import {
 	  ],
 		
 	},
-	{
-		path:"/login",
-		element:<Login/>
-	},
 
   ]);
 

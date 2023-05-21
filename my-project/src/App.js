@@ -11,7 +11,6 @@ import {
   import About from './pages/About';
   import New from './pages/New';
   import Contact from './pages/Contact';
-	import Login  from './pages/Login';
 	import Navbar from './components/Navbar';
 
   const Layout =() =>{

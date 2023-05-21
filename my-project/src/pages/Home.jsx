@@ -2,8 +2,7 @@ import React from 'react';
 import bgimage from "../assets/GQLR6101.JPG";
 import opportinuty from "../assets/opportinuty.JPG";
 import mision from "../assets/mission.JPG";
-import concept from "../assets/concept.JPG"
-import Contact from './Contact';
+import concept from "../assets/concept.JPG";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
@@ -15,25 +14,57 @@ const Home = () => {
       },[]
       )
   return (
-    <main className='bg-slate-100 '>
-        <section className='pt-24 md:pt-2 ' data-aos ="fade-up">
-                <img src={bgimage} alt= "bgimage" className='w-full h-full md:px-40'/>
-        </section>
-        <article className="px-4  justify-between items-center w-full h-full md:max-w-[1240px] m-auto " data-aos ="fade-up" >
-        <section className=''> 
+    <div className='bg-slate-100 sm:pt-24 pt-16 '>
 
-            <section className='md:flex gap-20 text-justify ' data-aos ="fade-up">
-                <div>
-                    <h3 className='text-blue-400 md:text-3xl text-2xl font-bold  py-4 text-justify' data-aos ="fade-up">Why Fort Worth Africa Funeral Foundation? 
-                    </h3>
-                </div>
-                <div className='' data-aos ="fade-up">
-                    <p className='font-sans font-normal py-1' data-aos ="fade-up">
-                    Our mission is to make sure that opportunity to be part of our community should rip benefit that comes with it. Such as personal grow, be educated in financial literacy, etc.
-                    <br /><button className='bg-blue-500 w-48 rounded-sm font-semibold  p-4  mt-10 hover:bg-blue-600 text-white text-2xl px-2 ' data-aos ="fade-up">READ MORE</button> 
-                    </p>
-                </div>
-            </section>
+        <article className="px-4  justify-between items-center w-full h-full md:max-w-[1240px] m-auto " data-aos ="fade-up" >
+
+            <article className='sm:flex gap-5'>
+                    <section className='sm:w-4/6'>
+                            <img src={bgimage} alt= "bgimage" className=' w-full'/>
+                            <div className='md:flex gap-20 text-justify ' data-aos ="fade-up">
+                                <div>
+                                    <h3 className='text-blue-400 md:text-5xl text-2xl font-bold  py-4 text-justify' data-aos ="fade-up">Why Fort Worth Africa Funeral Foundation? 
+                                    </h3>
+                                </div>
+                                <div className='pt-4' data-aos ="fade-up">
+                                    <p className='font-sans font-normal py-1' data-aos ="fade-up">
+                                    Our mission is to make sure that opportunity to be part of our community should rip benefit that comes with it. Such as personal grow, be educated in financial literacy, etc.
+                                    <br /><button className='bg-blue-500 w-48 rounded-sm font-semibold mb-5 p-4  mt-5 hover:bg-blue-600 text-white text-2xl px-2 ' data-aos ="fade-up">READ MORE</button> 
+                                    </p>
+                                </div>
+                            </div>
+                    </section>
+
+                    <section className=' bg-[#030e11]  h-{100px} sm:w-2/6 p-5 rounded-md '>
+                        <aside >
+                        <h1 className='text-yellow-400 text-3xl sm:text-6xl text-center'>News</h1>
+                        <div className='text-white sm:pt-10 px-5'>
+                        <div className='pt-5 border-b-2'>
+                            <h2 className='text-2xl pb-3'>Title new 1</h2>
+                            <p >Some detail for new Some detail for new   <br />Some detail for new  </p>
+                        </div>
+                        <div className='pt-5 border-b-2'>
+                            <h2 className='text-2xl pb-3'>Title new 2</h2>
+                            <p >Some detail for new  Some detail for new  <br />Some detail for new  </p>
+                        </div>
+                        <div className='pt-5 border-b-2'>
+                            <h2 className='text-2xl pb-3'>Title new 3</h2>
+                            <p >Some detail for new  Some detail for new   <br />Some detail for new  </p>
+                        </div>
+                        <div className='pt-5 border-b-2 '>
+                            <h2 className='text-2xl pb-3 '>Title new 4</h2>
+                            <p >Some detail for new Some detail for new   <br />Some detail for new </p>
+                        </div>
+                        <div className='pt-5  '>
+                            <h2 className='text-2xl pb-3'>Title new 4</h2>
+                            <p >Some detail for new Some detail for new   <br />Some detail for new </p>
+                        </div>
+                        
+                        </div>
+                        </aside>
+                    </section>
+
+            </article>
 
 
             <section className='md:flex  gap-5 py-5 max-w-[1240px] mx-auto md:grip-cols-3 '  >
@@ -85,11 +116,9 @@ const Home = () => {
                             <button type="submit" className='bg-blue-500 w-48 rounded-sm font-semibold  p-3'>Send Message</button>
                         </div>
                     </form>
-                    <div></div>
-                </section>
-        </section>
+                </section> 
     </article>
-    </main>
+    </div>
   )
 }
 

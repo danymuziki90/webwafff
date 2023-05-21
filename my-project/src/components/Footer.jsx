@@ -29,11 +29,11 @@ const Footer = () => {
         </div>
         <div  className='p-1 md:ml-8' data-aos ="fade-up"><h2 className='mb-4 text-[#05cad8d3]  font- text-justify text-2xl' >Find us on</h2>
           <div className='font-thin text-white text-2xs mb-5'>
-              <p className='flex items-center w-96 gap-3 mb-3' >
+              <p className='flex items-center w-fit gap-3 mb-3' >
               <FaPhoneAlt size={12}/>
               <a href="tel:+">+1234567890</a>
               </p>
-              <p className='flex items-center w-96 gap-3' >
+              <p className='flex items-center w-fit gap-3 ' >
               <CgMail size={19}/>
               <a href="mailto:"> fwaff@gmail.com</a>
               </p> 

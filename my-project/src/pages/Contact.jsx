@@ -1,57 +1,53 @@
 import React from 'react';
-import CSS from '../App.css'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import bgim from "../assets/bgim.JPG";
 
 const Contact = () => {
+  useEffect (() => {
+    Aos.init();
+  },[]
+  )
   return (
-    <main className='bg- pt-24 px-5 sm:px-1 justify-between items-center w-full max-h-full md:max-w-[1240px] mx-auto '>
-          <h1 className='justify-center items-center text-center text-4xl md:text-7xl'>
-            Get In Touch
-          </h1>
+   <div className=' pt-28 px-5 sm:px-1 justify-between items-center w-full max-h-full md:max-w-[1240px] mx-auto mb-10' >
+          
+          <div className=''>
+          <div className=''>
+            <h1 className='pb-5 justify-center items-center text-center text-4xl font-semibold md:text-7x sm:font-extrabold'>
+                    Get In Touch
+            </h1>
+            
+          </div>
 
-          <div className='flex'>
-          <article className='bg-white w-[50%]'>
-          <div>
-             <p>CALL US</p>
-            <p>+123-345-678</p>
-          </div>
-          <div>
-            <p>LOCATION</p>
-            <p></p>
-          </div>
-          <div>
-            <p>GMAIL</p>
-            <p>fwaff@gmail.com</p>
-          </div>
-           
-          </article>
-
-          <article  className='w-[50%]'>
-        <section  className='pt-24 px-5 sm:px-1 justify-between items-center w-full max-h-full md:max-w-[1240px] mx-auto '  >
-                    <form className='rounded-lg  md:px-32 p-10' >
-                       <div className=''>
-                            <div className=' justify-between py-5 flex  '>
-                                <input type="text" name="" id="" placeholder=' Your Name' className='h-10 rounded-md w-6/12 bg-blue-200'  />
-                                <input type="email" name="Email" id="" placeholder=' Your Email' className='h-10 rounded-md w-5/12 bg-blue-200'/>          
+          <article>
+            <section >
+            <h2 className='text-center sm:text-xl md:text-3xl ' >If you have a question, comment or idea, please fill in the form below and we will get back to you as soon as posssible.</h2>
+            <form className=' shadow-2xl bg-white rounded-lg sm:px-48 p-10 border-2 mt-10 pt-16 mx-10' >
+                       <div >
+                            <div className=' justify-between sm:flex items-center gap-5 pb-5'>
+                                <p className='text-lg font-medium'>Name:</p>
+                                <input type="text" name="" id="" placeholder=' ' className='h-10 rounded-md w-full border-b-2 border-black '  />
                             </div>
-                            <div>
-                                <input type="text" name="" id="" placeholder=' Subject:' className='h-20 rounded-md  bg-blue-200 w-full' />
+                            <div className=' justify-between sm:flex items-center gap-5 pb-5 '>
+                                <p className='text-lg font-medium'>Email:</p>
+                                <input type="email" name="Email" id="" placeholder=' ' className='h-10 rounded-md w-full border-b-2 border-black'/>
                             </div>
-                            <div className='py-5 '>
-                                <input type="text" name="" id="" placeholder=' Message:' className='h-40 rounded-md bg-blue-200 w-full' />
+                            <div className='py-5 sm:flex  gap-5 text-lg font-medium'>
+                                <p>Your Question/Comment</p>
+                                <input type="text" name="" id="" placeholder=' ' className='h-40 rounded-md  border-2 border-black  w-full' />
                             </div>
                        </div>
 
-                        <div className=''>
-                            <button type="submit" className=' border-2 border-gray-900 hover:bg-[#7aabe2] w-48 rounded-lg font-semibold  p-3'>Send Message</button>
+                        <div className='  border-2 max-w-fit bg-blue-500 w-48 rounded-xl font-semibold  p-3 '>
+                            <button type="submit" className=''>Send Message</button>
                         </div>
                     </form>
-                    
-                </section>
-        </article>
+            </section>
+          </article>
           </div>
-        
-    </main>
-  )
+    </div>
+  )  
 }
 
 export default Contact
